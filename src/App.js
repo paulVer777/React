@@ -5,7 +5,7 @@ import MyFirstComponent from './components/MyFirstComponent'  //importujemy komp
 const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu wstawiamy nasze componenty
 
     (
-        <MyFirstComponent name="Mateusz"/>
+        <MyFirstComponent name="Mateusz"/> // atrubut trafia do props
     );
 
 

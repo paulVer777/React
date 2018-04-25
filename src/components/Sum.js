@@ -6,7 +6,7 @@ const Add=({numberA,numberB})=>(
     <div>
 
         Suma {numberA} i {numberB} jest równa {numberA + numberB}
-         <Header text={numberA + numberB} />
+         <Header text={numberA + numberB} isRed={true}/>
 
     </div>
 

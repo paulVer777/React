@@ -1,31 +1,32 @@
 import React from 'react'
 
 
-const styles={
+const styles = {
 
-    header:{
-    color:'red',
-    margin:20,
-    display:'inline'
-}
+    header: {
+        color: 'black',
+        margin: 20,
+        display: 'inline'
+    }
 
-}
+};
 
 
-
-const Hed=(props)=>(
+const Hed = (props) => (
 
     <div>
 
-       <h1
+        <h1
 
-           style={styles.header //obiekt jsx a w nim obiekt css
+            style={
+                props.isRed ?
+                {...styles.header, color: 'red'}
+                :
+                styles.header
+            }
 
 
-           }
-
-
-       >{props.text}</h1>
+        >{props.text}</h1>
 
 
     </div>
@@ -33,4 +34,4 @@ const Hed=(props)=>(
 
 );
 
-export  default Hed
+export default Hed

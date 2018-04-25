@@ -1,20 +1,17 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css'; // import plikow css
+import React from 'react';
 
-const App = () =>
+
+
+const App = () =>  //komponent ktory jest funkcja
 
     (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <h1 className="App-title">Welcome to React</h1> //nazwa klasy css
-            </header>
-            <p className="App-intro">
-                To get started, edit <code>src/App.js</code> and save to reload.
-            </p>
+        <div >
+
         </div>
     );
+
+
+console.log(App());
 
 
 export default App;

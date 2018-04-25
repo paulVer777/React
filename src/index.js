@@ -9,3 +9,4 @@ registerServiceWorker();
 
 
 
+//do App wrzucamy nasze komponenty

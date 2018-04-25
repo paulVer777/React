@@ -18,7 +18,7 @@ const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu ws
 
     );
 
-export default App
+export default App //przesyłamy do index.js
 
 
 

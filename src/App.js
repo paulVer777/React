@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom' //zmiana nazwy n
 
 
 
+
+
 import MyFirstComponent from './components/MyFirstComponent'  //importujemy komponent z pliku MyFirstC.js
 import Add from './components/Sum'
 import Header from './components/Header'
@@ -17,12 +19,26 @@ const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu ws
     (
         <div>
 
-            <MappingArray/>
-            <MappingArray2/>
+            <Router>
+
+                <div>
+
+                 <Route path={'/mapping-array'} component={MappingArray} />
+                 <Route path={'/mappingarray2'} component={MappingArray2} />
+                 <Route path={'/counter'} component={CounterWithState} />
+
+
+
+                </div>
+
+            </Router>
+
+
+
 
             <hr/>
 
-            <CounterWithState/>
+
 
 
 

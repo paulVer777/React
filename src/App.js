@@ -1,9 +1,6 @@
 import React from 'react';
 
-import {BrowserRouter as Router, Route} from 'react-router-dom' //zmiana nazwy na router.
-
-
-
+import {BrowserRouter as Router, Route,Link} from 'react-router-dom' //zmiana nazwy na router.
 
 
 import MyFirstComponent from './components/MyFirstComponent'  //importujemy komponent z pliku MyFirstC.js
@@ -23,10 +20,16 @@ const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu ws
 
                 <div>
 
-                 <Route path={'/mapping-array'} component={MappingArray} />
-                 <Route path={'/mappingarray2'} component={MappingArray2} />
-                 <Route path={'/counter'} component={CounterWithState} />
 
+                    <Link to={'/counter'}>Counter</Link>
+                    <Link to={'/mapping-array'}>MappingArray</Link>
+                    <Link to={'/mappingarray2'}>MappingArray</Link>
+
+
+
+                    <Route path={'/mapping-array'} component={MappingArray}/>
+                    <Route path={'/mappingarray2'} component={MappingArray2}/>
+                    <Route path={'/counter'} component={CounterWithState}/>
 
 
                 </div>
@@ -34,21 +37,15 @@ const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu ws
             </Router>
 
 
-
-
             <hr/>
-
-
-
 
 
             <MyFirstComponent name="Mateusz"/>
 
             {/*// atrubut trafia do props*/}
 
-            <Add numberA={5} numberB={10} /> /*5 i 10 trafia do obiektu props*/
+            <Add numberA={5} numberB={10}/> /*5 i 10 trafia do obiektu props*/
             <Header text={'Ala ma kota'} isRed={false}/>
-
 
 
         </div>

@@ -8,7 +8,7 @@ const imiona=["Adam","Marek","Olek","Zenek"];
 const MappingArray2 = (props) =>
     (
 
-       imiona.map((name,i)=> <div key={i}>{i}.{name}</div>) //name to value
+       imiona.map((name,i)=> <div key={i}>{i+1}.{name}</div>) //name to value
 
 
     );

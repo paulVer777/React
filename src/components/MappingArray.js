@@ -3,11 +3,11 @@ import React from 'react'
 
 const names =
     [
-        {name: "Ola", key: 'asdasdasdsda'},
-        {name: "Ula", key: 'asdasdasdsda'},
-        {name: "Ala", key: 'asdasdasdsda'},
-        {name: "Ela", key: 'asdasdasdsda'},
-        {name: "Pola", key: 'asdasdasdsda'}
+        {name: "Ola", key: 'asdasdasdsda1'},
+        {name: "Ula", key: 'asdasdasdsdad'},
+        {name: "Ala", key: 'asdasdasdsdae112'},
+        {name: "Ela", key: 'asdasdasdsdasad'},
+        {name: "Pola", key: 'asdasdasdsda12312312'}
 
 
     ]

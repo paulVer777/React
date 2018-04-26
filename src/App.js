@@ -4,6 +4,7 @@ import Add from './components/Sum'
 import Header from './components/Header'
 import MappingArray from './components/MappingArray'
 import MappingArray2 from './components/MappingArray2'
+import CounterWithState from "./components/CounterWithState";
 
 
 const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu wstawiamy nasze componenty
@@ -20,6 +21,11 @@ const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu ws
 
             <MappingArray/>
             <MappingArray2/>
+
+            <hr/>
+
+            <CounterWithState/>
+
         </div>
 
 

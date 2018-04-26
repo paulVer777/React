@@ -10,6 +10,7 @@ import MappingArray from './components/MappingArray'
 import MappingArray2 from './components/MappingArray2'
 import CounterWithState from "./components/CounterWithState";
 import Dashboard from "./components/Dashboard";
+import Hello from "./components/hello";
 
 
 const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu wstawiamy nasze componenty
@@ -21,13 +22,15 @@ const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu ws
 
                 <div>
 
-                    <Route exact path={'/counter'} component={Dashboard}/>  /*dashboard pojawi sie tylko po kliknieciu w component counter*/
+                    <Route exact path={'/counter'} component={Dashboard}/>   /*dashboard pojawi sie tylko pokliknieciu w component counter*/
+
+                    <Link to={'/hello/Mateusz'}>Hello</Link>
                     <Link to={'/counter'}>Counter</Link>
                     <Link to={'/mapping-array'}>MappingArray</Link>
                     <Link to={'/mappingarray2'}>MappingArray</Link>
-                    <Link to={'/mappingarray2'}>MappingArray</Link>
                     <Link to={'my-first-component'}>My first Component</Link>
 
+                    <hr/>
 
 
                     <Route path={'/mapping-array'} component={MappingArray}/>
@@ -39,21 +42,26 @@ const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu ws
 
                     )}/>
 
+                    <Route path={'/hello/:name'} component={Hello}/> /*//za hello jest name, i przekaze to do match params i */
+
+
+
+
+
 
                 </div>
 
             </Router>
 
 
-            <hr/>
+
 
 
 
 
             {/*// atrubut trafia do props*/}
 
-            <Add numberA={5} numberB={10}/> /*5 i 10 trafia do obiektu props*/
-            <Header text={'Ala ma kota'} isRed={false}/>
+
 
 
         </div>

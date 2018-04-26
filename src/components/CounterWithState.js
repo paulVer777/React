@@ -1,4 +1,17 @@
 import React from 'react'
+import RaisedButton from 'material-ui/RaisedButton';
+
+const styles={
+
+    btn:{
+
+        margin:'10px'
+
+    }
+
+
+}
+
 
 
 class CounterWithState extends React.Component {  //propsy przechodza do glownej klasy React.Components
@@ -43,8 +56,8 @@ class CounterWithState extends React.Component {  //propsy przechodza do glownej
 
                 <h1>{this.state.count}</h1>
                 <div>
-                    <button onClick={minusBtnClick}>-</button>
-                    <button onClick={plusBtnClick}>+</button>
+                    <RaisedButton style={styles.btn} primary={true} label={'-'} onClick={minusBtnClick} />
+                    <RaisedButton  style={styles.btn} secondary={true} label={'+'} onClick={plusBtnClick} />
 
 
                 </div>

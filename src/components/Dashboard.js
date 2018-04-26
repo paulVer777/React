@@ -1,21 +1,19 @@
 import React from 'react'
+import { PieChart, Pie, Tooltip }  from 'recharts'
+
+const Dashboard = () => {
+
+    return (
 
 
-const Dashboard=()=>
-    (
-        <div>Dashboard</div>
+        <div>Dashbkoijiooard</div>
 
 
+    )
+};
 
 
-
-
-    );
-
-
-
-
-    export  default  Dashboard
+export default Dashboard
 
 
 

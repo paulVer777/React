@@ -9,8 +9,7 @@ import CounterWithState from "./components/CounterWithState";
 import Dashboard from "./components/Dashboard";
 import Hello from "./components/hello";
 import AppBar from 'material-ui/AppBar';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
+import SideBar from './components/Sidebar';
 
 
 
@@ -32,14 +31,6 @@ class App extends React.Component{
 
     });
 
-
-
-
-
-
-
-
-
     render(){
 
 
@@ -58,27 +49,11 @@ class App extends React.Component{
 
                 <div>
 
-                   <Drawer open={this.state.isDrawerOpen}
+                   <SideBar
 
+                   isSidebarOpen={this.state.isDrawerOpen} //tu przekazany stan appa
 
-                              docked={false}
-                           onRequestChange={this.drawerHand}
-
-                   >
-
-                       <Link to={'/hello/Mateusz'}><MenuItem>Hello</MenuItem></Link>
-                       <Link to={'/counter'}><MenuItem>Counter</MenuItem></Link>
-                       <Link to={'/mapping-array'}><MenuItem>MappingArray</MenuItem></Link>
-                       <Link to={'/mappingarray2'}><MenuItem>MappingArray</MenuItem></Link>
-                       <Link to={'my-first-component'}><MenuItem>My first Component</MenuItem></Link>
-
-
-
-                   </Drawer>
-
-
-
-
+                   />
 
                     <Route exact path={'/counter'} component={Dashboard}/>   /*dashboard pojawi sie tylko po kliknieciu w component counter*/
 
@@ -110,7 +85,6 @@ class App extends React.Component{
 
     );
 }}
-
 
 export default App //przesyłamy do index.js
 

@@ -9,6 +9,7 @@ import Header from './components/Header'
 import MappingArray from './components/MappingArray'
 import MappingArray2 from './components/MappingArray2'
 import CounterWithState from "./components/CounterWithState";
+import Dashboard from "./components/Dashboard";
 
 
 const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu wstawiamy nasze componenty
@@ -20,16 +21,23 @@ const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu ws
 
                 <div>
 
-
+                    <Route exact path={'/counter'} component={Dashboard}/>  /*dashboard pojawi sie tylko po kliknieciu w component counter*/
                     <Link to={'/counter'}>Counter</Link>
                     <Link to={'/mapping-array'}>MappingArray</Link>
                     <Link to={'/mappingarray2'}>MappingArray</Link>
+                    <Link to={'/mappingarray2'}>MappingArray</Link>
+                    <Link to={'my-first-component'}>My first Component</Link>
 
 
 
                     <Route path={'/mapping-array'} component={MappingArray}/>
                     <Route path={'/mappingarray2'} component={MappingArray2}/>
                     <Route path={'/counter'} component={CounterWithState}/>
+                    <Route path={'/my-first-component'} render={()=>(
+
+                        <MyFirstComponent name={'Mateusz'}/>
+
+                    )}/>
 
 
                 </div>
@@ -40,7 +48,7 @@ const App = () =>  //komponent glowny ktory jest funkcja i do tego komponentu ws
             <hr/>
 
 
-            <MyFirstComponent name="Mateusz"/>
+
 
             {/*// atrubut trafia do props*/}
 

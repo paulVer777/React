@@ -13,8 +13,29 @@ class CounterWithState extends React.Component {  //propsy przechodza do glownej
 
     render() {
 
-        const minusBtnClick = () => this.state.count--; //trzeba odświeżyć żeby pokazać wynik na ekranie
+        const minusBtnClick = () => {
 
+
+            //trzeba odświeżyć żeby pokazać wynik na ekranie
+            this.setState({ //set state przyjmuje nowy obiekt,ten obiekt zostanie polaczony z obiektem state,
+
+                count: this.state.count - 1 //a nastepnie wyrenderowany ponownie.
+
+            })
+
+        };
+
+        const plusBtnClick = () => {
+
+
+            //trzeba odświeżyć żeby pokazać wynik na ekranie
+            this.setState({ //set state przyjmuje nowy obiekt,ten obiekt zostanie polaczony z obiektem state,
+
+                count: this.state.count + 1 //a nastepnie wyrenderowany ponownie.
+
+            })
+
+        };
 
         return (
 
@@ -23,7 +44,7 @@ class CounterWithState extends React.Component {  //propsy przechodza do glownej
                 <h1>{this.state.count}</h1>
                 <div>
                     <button onClick={minusBtnClick}>-</button>
-                    <button>+</button>
+                    <button onClick={plusBtnClick}>+</button>
 
 
                 </div>
